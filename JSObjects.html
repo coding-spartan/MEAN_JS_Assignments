@@ -1,0 +1,59 @@
+<html>
+<head>
+<script>
+let students = [
+    {name: 'Remy', cohort: 'Jan'},
+    {name: 'Genevieve', cohort: 'March'},
+    {name: 'Chuck', cohort: 'Jan'},
+    {name: 'Osmund', cohort: 'June'},
+    {name: 'Nikki', cohort: 'June'},
+    {name: 'Boris', cohort: 'June'}
+];
+
+function GetObjects(students){
+    for(var i=0;i<students.length;i++){
+        console.log("Name: " + students[i].name + " , " + "Cohort: " + 
+        students[i].cohort);
+    }
+}
+console.log("CHALLENGE 1")
+GetObjects(students);
+
+/////////////CHALLENGE 2
+
+let users = {
+    employees: [
+        {'first_name':  'Miguel', 'last_name' : 'Jones'},
+        {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+        {'first_name' : 'Nora', 'last_name' : 'Lu'},
+        {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+    ],
+    managers: [
+       {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+       {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+    ]
+ };
+
+ function GetNames(users){
+     console.log("Employees");
+     var k = 0
+     for(var x in users.employees){
+         console.log((k+1) + " - " + users.employees[x].last_name.toUpperCase() + " , " + users.employees[x].first_name.toUpperCase()
+         + " - " + 
+         (users.employees[x].first_name + users.employees[x].last_name).length);
+        k += 1
+     }
+     console.log("Managers");
+     var z = 0
+     for(var x in users.managers){
+         console.log((z+1) + " - " + users.managers[x].last_name.toUpperCase() + " , " + users.managers[x].first_name.toUpperCase() + " - " + 
+         (users.managers[x].first_name + users.managers[x].last_name).length);
+         z += 1
+     }
+ }
+
+console.log("CHALLENGE 2")
+GetNames(users)
+</script>
+</head>
+</html>
